@@ -9,11 +9,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Nunito',sans-serif;background:#0a0010;overflow-x:hidden;color:#fff}
-
-/* ── STAR BG ── */
 #star-canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
-
-/* ── AURORA BG ── */
 .aurora{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
 .aurora span{position:absolute;border-radius:50%;filter:blur(80px);animation:drift linear infinite;opacity:0.35}
 .aurora span:nth-child(1){width:600px;height:600px;background:#a855f7;top:-200px;left:-100px;animation-duration:18s}
@@ -21,18 +17,10 @@ body{font-family:'Nunito',sans-serif;background:#0a0010;overflow-x:hidden;color:
 .aurora span:nth-child(3){width:700px;height:400px;background:#4ecdc4;bottom:-200px;left:20%;animation-duration:26s;animation-delay:-12s}
 .aurora span:nth-child(4){width:400px;height:400px;background:#ffd700;top:60%;left:-100px;animation-duration:20s;animation-delay:-4s}
 @keyframes drift{0%{transform:translate(0,0) scale(1)}33%{transform:translate(80px,-60px) scale(1.1)}66%{transform:translate(-50px,80px) scale(0.95)}100%{transform:translate(0,0) scale(1)}}
-
-/* ── CONFETTI ── */
 #confetti-canvas{position:fixed;inset:0;pointer-events:none;z-index:999}
-
-/* ── FLOATING EMOJIS ── */
 .fe{position:fixed;pointer-events:none;z-index:2;animation:floatUp linear forwards}
 @keyframes floatUp{0%{transform:translateY(110vh) rotate(0deg);opacity:.8}80%{opacity:.7}100%{transform:translateY(-15vh) rotate(360deg);opacity:0}}
-
-/* ── SECTIONS ── */
 section,header,footer{position:relative;z-index:10}
-
-/* ── HERO ── */
 .hero{text-align:center;padding:4rem 1rem 2rem;position:relative}
 .crown-wrap{font-size:5rem;display:block;animation:crownBounce 1.5s ease-in-out infinite alternate}
 @keyframes crownBounce{from{transform:translateY(0) rotate(-5deg)}to{transform:translateY(-18px) rotate(5deg)}}
@@ -42,18 +30,12 @@ section,header,footer{position:relative;z-index:10}
 .hero-sub{font-size:clamp(1rem,3vw,1.5rem);color:#e0b8ff;font-weight:700;letter-spacing:2px;margin-top:.5rem}
 .sparkle-row{display:flex;justify-content:center;gap:.5rem;font-size:1.8rem;margin:1rem 0;animation:sparkleRow 2s ease-in-out infinite alternate}
 @keyframes sparkleRow{from{gap:.5rem}to{gap:1.2rem}}
-
-/* ── PHOTO ── */
 .photo-section{display:flex;justify-content:center;padding:2rem 1rem;position:relative}
 .photo-outer{position:relative;display:inline-block}
 .photo-ring{width:320px;height:420px;border-radius:2rem;background:linear-gradient(135deg,#ff6eb4,#a855f7,#ffd700,#4ecdc4,#ff6eb4);background-size:300%;animation:ringGrad 4s linear infinite;padding:6px;box-shadow:0 0 60px rgba(168,85,247,.6),0 0 120px rgba(255,110,180,.3)}
 @keyframes ringGrad{0%{background-position:0%}100%{background-position:300%}}
 .photo-inner{width:100%;height:100%;border-radius:calc(2rem - 4px);overflow:hidden;background:linear-gradient(160deg,#1a0030,#2d0050)}
 .photo-inner img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
-.photo-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;background:linear-gradient(160deg,#1a0030,#2d0050)}
-.photo-placeholder .ph-icon{font-size:5rem}
-.photo-placeholder .ph-name{font-family:'Fredoka One',cursive;font-size:1.4rem;color:#e0b8ff;text-align:center;line-height:1.4}
-.photo-placeholder .ph-hint{font-size:.8rem;color:#a855f7;text-align:center;padding:0 1rem}
 .age-badge{position:absolute;bottom:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,#ffd700,#ff9500);display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:3rem;color:#fff;box-shadow:0 8px 30px rgba(255,165,0,.6);border:5px solid #fff;animation:agePulse 2s ease-in-out infinite}
 @keyframes agePulse{0%,100%{transform:scale(1) rotate(-5deg)}50%{transform:scale(1.1) rotate(5deg)}}
 .photo-deco{position:absolute;font-size:2rem;animation:decoFloat 3s ease-in-out infinite alternate}
@@ -62,22 +44,14 @@ section,header,footer{position:relative;z-index:10}
 .photo-deco.d3{bottom:60px;left:-25px;animation-delay:1s}
 .photo-deco.d4{top:50%;right:-30px;animation-delay:1.5s}
 @keyframes decoFloat{from{transform:translateY(0) rotate(-10deg)}to{transform:translateY(-15px) rotate(10deg)}}
-
-/* ── NAME PLAQUE ── */
 .name-plaque{text-align:center;padding:3rem 1rem 1rem;position:relative;z-index:10}
 .plaque-box{display:inline-block;background:rgba(255,255,255,.07);border:2px solid rgba(255,110,180,.4);border-radius:2rem;padding:1.5rem 3rem;backdrop-filter:blur(10px);box-shadow:0 0 40px rgba(168,85,247,.2)}
 .plaque-name{font-family:'Fredoka One',cursive;font-size:clamp(2rem,5vw,3.5rem);background:linear-gradient(90deg,#ff6eb4,#ffd700,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .plaque-sub{color:#c084fc;font-size:1.1rem;font-weight:700;margin-top:.3rem}
-
-/* ── CAKE ── */
 .cake-section{display:flex;justify-content:center;padding:2rem 1rem;position:relative;z-index:10}
-
-/* ── BUTTONS ── */
 .btn-celebrate{display:block;margin:0 auto 2rem;background:linear-gradient(135deg,#ff6eb4,#a855f7);color:#fff;border:none;padding:1.2rem 3rem;border-radius:50px;font-family:'Fredoka One',cursive;font-size:1.5rem;cursor:pointer;box-shadow:0 8px 40px rgba(168,85,247,.5);transition:transform .2s,box-shadow .2s;position:relative;z-index:10;letter-spacing:1px;animation:btnPulse 2s ease-in-out infinite}
 @keyframes btnPulse{0%,100%{box-shadow:0 8px 40px rgba(168,85,247,.5)}50%{box-shadow:0 8px 60px rgba(255,110,180,.8),0 0 80px rgba(168,85,247,.4)}}
 .btn-celebrate:hover{transform:scale(1.08)}
-
-/* ── BALLOONS ── */
 .balloons{display:flex;justify-content:center;gap:1.5rem;padding:1rem;flex-wrap:wrap;position:relative;z-index:10}
 .balloon{font-size:4rem;cursor:pointer;transition:transform .2s;display:inline-block}
 .balloon:nth-child(1){animation:sway1 2s ease-in-out infinite alternate}
@@ -88,8 +62,6 @@ section,header,footer{position:relative;z-index:10}
 @keyframes sway1{from{transform:rotate(-8deg) translateY(0)}to{transform:rotate(8deg) translateY(-20px)}}
 @keyframes sway2{from{transform:rotate(6deg) translateY(-5px)}to{transform:rotate(-6deg) translateY(-20px)}}
 .balloon:hover{transform:scale(1.4)!important}
-
-/* ── WISH CARDS ── */
 .cards-section{padding:2rem 1.5rem;max-width:1000px;margin:0 auto;position:relative;z-index:10}
 .section-heading{text-align:center;font-family:'Fredoka One',cursive;font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:1.5rem;background:linear-gradient(90deg,#ffd700,#ff6eb4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
@@ -112,21 +84,34 @@ section,header,footer{position:relative;z-index:10}
 .wish-card:nth-child(6) .icon{animation-delay:2.5s}
 .wish-card h3{font-family:'Fredoka One',cursive;font-size:1.3rem;color:#e0b8ff;margin-bottom:.5rem}
 .wish-card p{color:#c4b5d4;font-size:.95rem;line-height:1.6}
-
-/* ── LETTER ── */
 .letter-section{max-width:720px;margin:1rem auto 3rem;padding:0 1.5rem;position:relative;z-index:10}
 .letter-card{background:rgba(255,255,255,.06);border:2px dashed rgba(255,110,180,.4);border-radius:2rem;padding:2.5rem 2rem;backdrop-filter:blur(12px);box-shadow:0 0 60px rgba(168,85,247,.15);position:relative}
 .letter-card::before{content:'💌';position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:2.5rem}
 .letter-card h2{font-family:'Fredoka One',cursive;font-size:1.8rem;color:#e0b8ff;text-align:center;margin-bottom:1.2rem}
 .letter-card p{color:#d4c5e8;line-height:1.9;font-size:1.05rem;margin-bottom:1rem}
 .letter-sign{text-align:right;font-family:'Fredoka One',cursive;color:#ff6eb4;font-size:1.4rem;margin-top:1.5rem}
-
-/* ── FOOTER ── */
 footer{text-align:center;padding:2rem 1rem;color:#c084fc;font-weight:700;position:relative;z-index:10}
 footer span{color:#ff6eb4}
 
-/* ── PHOTO TIP ── */
-.photo-tip{text-align:center;color:#9c6fc0;font-size:.82rem;margin-top:.5rem;position:relative;z-index:10}
+/* ── MUSIC BUTTON ── */
+#music-btn{
+  position:fixed;bottom:25px;right:25px;z-index:9999;
+  width:65px;height:65px;border-radius:50%;border:none;
+  background:linear-gradient(135deg,#ff6eb4,#a855f7);
+  font-size:1.8rem;cursor:pointer;
+  box-shadow:0 8px 30px rgba(168,85,247,.7);
+  animation:btnPulse 2s ease-in-out infinite;
+  transition:transform .2s;
+}
+#music-btn:hover{transform:scale(1.15)}
+.music-label{
+  position:fixed;bottom:95px;right:18px;z-index:9999;
+  background:rgba(168,85,247,.9);color:#fff;
+  font-family:'Fredoka One',cursive;font-size:.85rem;
+  padding:.3rem .8rem;border-radius:1rem;
+  pointer-events:none;
+  animation:btnPulse 2s ease-in-out infinite;
+}
 
 @media(max-width:500px){
   .photo-ring{width:260px;height:340px}
@@ -139,6 +124,13 @@ footer span{color:#ff6eb4}
 <canvas id="star-canvas"></canvas>
 <div class="aurora"><span></span><span></span><span></span><span></span></div>
 <canvas id="confetti-canvas"></canvas>
+
+<!-- ══ MUSIC PLAYER ══ -->
+<audio id="bday-song" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+<div class="music-label">🎵 Tap to play!</div>
+<button id="music-btn" onclick="toggleSong()">🎵</button>
 
 <!-- HERO -->
 <header class="hero">
@@ -166,27 +158,12 @@ footer span{color:#ff6eb4}
     <span class="photo-deco d4">🌟</span>
     <div class="photo-ring">
       <div class="photo-inner">
-        <!--
-          ════════════════════════════════════════
-          HOW TO ADD SEHAR'S PHOTO:
-          Put sehar.jpeg in the same folder as this file.
-          Then replace the <div class="photo-placeholder">
-          block below with:
-              <img src="sehar.jpeg" alt="Sehar Ali">
-          The photo will show full body / portrait style.
-          ════════════════════════════════════════
-        -->
         <img src="sehar.jpeg" alt="Sehar Ali">
-          <span class="ph-icon">🌸</span>
-          <span class="ph-name">Princess Sehar Ali</span>
-          <span class="ph-hint">Place sehar.jpeg here for full portrait view</span>
-        </div>
       </div>
     </div>
     <div class="age-badge">10</div>
   </div>
 </div>
-
 
 <!-- NAME PLAQUE -->
 <div class="name-plaque">
@@ -205,39 +182,31 @@ footer span{color:#ff6eb4}
         <stop offset="100%" stop-color="#FF6EB4" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <!-- glow under cake -->
     <ellipse cx="140" cy="215" rx="100" ry="18" fill="url(#glowPink)" opacity=".5"/>
-    <!-- candles -->
     <rect x="58"  y="42" width="13" height="42" rx="5" fill="#FF6EB4"/>
     <rect x="90"  y="32" width="13" height="52" rx="5" fill="#A855F7"/>
     <rect x="122" y="38" width="13" height="46" rx="5" fill="#FFD700"/>
     <rect x="154" y="32" width="13" height="52" rx="5" fill="#4ECDC4"/>
     <rect x="186" y="42" width="13" height="42" rx="5" fill="#FF6B6B"/>
-    <!-- flames -->
     <ellipse cx="64" cy="35" rx="7" ry="11" fill="#FFE066" opacity=".95"><animate attributeName="ry" values="11;14;11" dur=".65s" repeatCount="indefinite"/><animate attributeName="cy" values="35;31;35" dur=".65s" repeatCount="indefinite"/></ellipse>
     <ellipse cx="96" cy="25" rx="7" ry="11" fill="#FF9ED4" opacity=".95"><animate attributeName="ry" values="11;15;11" dur=".85s" repeatCount="indefinite"/><animate attributeName="cy" values="25;21;25" dur=".85s" repeatCount="indefinite"/></ellipse>
     <ellipse cx="128" cy="31" rx="7" ry="11" fill="#C084FC" opacity=".95"><animate attributeName="ry" values="11;13;11" dur=".55s" repeatCount="indefinite"/><animate attributeName="cy" values="31;28;31" dur=".55s" repeatCount="indefinite"/></ellipse>
     <ellipse cx="160" cy="25" rx="7" ry="11" fill="#FFE066" opacity=".95"><animate attributeName="ry" values="11;14;11" dur=".75s" repeatCount="indefinite"/><animate attributeName="cy" values="25;21;25" dur=".75s" repeatCount="indefinite"/></ellipse>
     <ellipse cx="192" cy="35" rx="7" ry="11" fill="#FF9ED4" opacity=".95"><animate attributeName="ry" values="11;13;11" dur=".7s" repeatCount="indefinite"/><animate attributeName="cy" values="35;31;35" dur=".7s" repeatCount="indefinite"/></ellipse>
-    <!-- top tier -->
     <rect x="48" y="84" width="184" height="52" rx="14" fill="#FF6EB4"/>
     <rect x="48" y="84" width="184" height="18" rx="14" fill="#FF9ED4"/>
-    <!-- frosting drips top -->
     <ellipse cx="70"  cy="84" rx="12" ry="9" fill="white" opacity=".85"/>
     <ellipse cx="100" cy="84" rx="12" ry="9" fill="white" opacity=".85"/>
     <ellipse cx="130" cy="84" rx="12" ry="9" fill="white" opacity=".85"/>
     <ellipse cx="160" cy="84" rx="12" ry="9" fill="white" opacity=".85"/>
     <ellipse cx="190" cy="84" rx="12" ry="9" fill="white" opacity=".85"/>
     <ellipse cx="215" cy="84" rx="12" ry="9" fill="white" opacity=".85"/>
-    <!-- dots top tier -->
     <circle cx="90"  cy="109" r="6" fill="white" opacity=".6"/>
     <circle cx="120" cy="103" r="5" fill="#FFD700"/>
     <circle cx="150" cy="109" r="6" fill="white" opacity=".6"/>
     <circle cx="180" cy="103" r="5" fill="#FFD700"/>
-    <!-- bottom tier -->
     <rect x="26" y="136" width="228" height="72" rx="16" fill="#A855F7"/>
     <rect x="26" y="136" width="228" height="22" rx="16" fill="#C084FC"/>
-    <!-- frosting drips bottom -->
     <ellipse cx="50"  cy="136" rx="13" ry="10" fill="white" opacity=".85"/>
     <ellipse cx="82"  cy="136" rx="13" ry="10" fill="white" opacity=".85"/>
     <ellipse cx="114" cy="136" rx="13" ry="10" fill="white" opacity=".85"/>
@@ -245,59 +214,31 @@ footer span{color:#ff6eb4}
     <ellipse cx="178" cy="136" rx="13" ry="10" fill="white" opacity=".85"/>
     <ellipse cx="210" cy="136" rx="13" ry="10" fill="white" opacity=".85"/>
     <ellipse cx="238" cy="136" rx="11" ry="9" fill="white" opacity=".85"/>
-    <!-- stars bottom tier -->
     <text x="68"  y="184" font-size="22" fill="#FFD700">★</text>
     <text x="112" y="178" font-size="16" fill="white" opacity=".7">✦</text>
     <text x="148" y="184" font-size="22" fill="#FFD700">★</text>
     <text x="188" y="178" font-size="16" fill="white" opacity=".7">✦</text>
-    <!-- text on cake -->
     <text x="140" y="170" font-family="Fredoka One,cursive" font-size="17" fill="white" text-anchor="middle">Happy Birthday!</text>
-    <!-- plate -->
     <ellipse cx="140" cy="210" rx="120" ry="14" fill="#2d0050" opacity=".6"/>
   </svg>
 </section>
 
-<!-- CELEBRATE BUTTON -->
 <button class="btn-celebrate" onclick="launchConfetti()">🎉 Tap to Celebrate! 🎉</button>
 
 <!-- WISH CARDS -->
 <section class="cards-section">
   <h2 class="section-heading">🌟 Birthday Wishes for Sehar 🌟</h2>
   <div class="cards-grid">
-    <div class="wish-card">
-      <span class="icon">🌈</span>
-      <h3>Happiness</h3>
-      <p>May every single day of your life be as bright, colorful and joyful as the most beautiful rainbow!</p>
-    </div>
-    <div class="wish-card">
-      <span class="icon">📚</span>
-      <h3>Knowledge</h3>
-      <p>May you grow wiser and smarter every year, shining bright in everything you learn and discover!</p>
-    </div>
-    <div class="wish-card">
-      <span class="icon">💫</span>
-      <h3>Big Dreams</h3>
-      <p>May all your biggest dreams come true — the sky is not the limit, the stars are your destination!</p>
-    </div>
-    <div class="wish-card">
-      <span class="icon">❤️</span>
-      <h3>Endless Love</h3>
-      <p>May you always be surrounded by family and friends who love you to the moon and back, forever!</p>
-    </div>
-    <div class="wish-card">
-      <span class="icon">🏆</span>
-      <h3>Great Success</h3>
-      <p>May you achieve incredible things in life and make your whole family proud at every step you take!</p>
-    </div>
-    <div class="wish-card">
-      <span class="icon">🌸</span>
-      <h3>Good Health</h3>
-      <p>May you always be healthy, strong, and bursting with energy to enjoy every beautiful moment of life!</p>
-    </div>
+    <div class="wish-card"><span class="icon">🌈</span><h3>Happiness</h3><p>May every single day of your life be as bright, colorful and joyful as the most beautiful rainbow!</p></div>
+    <div class="wish-card"><span class="icon">📚</span><h3>Knowledge</h3><p>May you grow wiser and smarter every year, shining bright in everything you learn and discover!</p></div>
+    <div class="wish-card"><span class="icon">💫</span><h3>Big Dreams</h3><p>May all your biggest dreams come true — the sky is not the limit, the stars are your destination!</p></div>
+    <div class="wish-card"><span class="icon">❤️</span><h3>Endless Love</h3><p>May you always be surrounded by family and friends who love you to the moon and back, forever!</p></div>
+    <div class="wish-card"><span class="icon">🏆</span><h3>Great Success</h3><p>May you achieve incredible things in life and make your whole family proud at every step you take!</p></div>
+    <div class="wish-card"><span class="icon">🌸</span><h3>Good Health</h3><p>May you always be healthy, strong, and bursting with energy to enjoy every beautiful moment of life!</p></div>
   </div>
 </section>
 
-<!-- LETTER FROM CHACHO -->
+<!-- LETTER -->
 <div class="letter-section">
   <div class="letter-card">
     <h2>💜 A Special Letter from Chacho 💜</h2>
@@ -306,98 +247,70 @@ footer span{color:#ff6eb4}
     <p>You are the most special little princess in the world, and every single moment with you is a treasure beyond words. Your smile lights up every room you walk into, and your laughter is the most wonderful music I have ever heard. I am so incredibly proud of the young lady you are becoming.</p>
     <p>On this magical 10th birthday, I wish you a life overflowing with adventure, happiness, and every dream your heart desires. Always remember — no matter how tall you grow or how far you go — you will always, always be my little princess. That will never change.</p>
     <p>I love you more than all the stars in the sky, all the flowers in the world, and all the candies in every shop put together! 🌟</p>
-    <div class="letter-sign">
-      With all my love,<br>
-      Chacho Rizwan Ashraf 💜✨
-    </div>
+    <div class="letter-sign">With all my love,<br>Chacho Rizwan Ashraf 💜✨</div>
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   Made with <span>💖</span> for <span>Sehar Ali</span> &nbsp;·&nbsp; Turning <span>10</span> on <span>9 June 2026</span> 🎂
 </footer>
 
 <script>
-/* ── STAR FIELD ── */
-const sc=document.getElementById('star-canvas');
-const sctx=sc.getContext('2d');
+/* ── STARS ── */
+const sc=document.getElementById('star-canvas'),sctx=sc.getContext('2d');
 let stars=[];
-function initStars(){
-  sc.width=window.innerWidth;sc.height=window.innerHeight;
-  stars=[];
-  for(let i=0;i<200;i++){
-    stars.push({x:Math.random()*sc.width,y:Math.random()*sc.height,r:Math.random()*1.8+.3,a:Math.random(),da:(Math.random()-.5)*.02,speed:Math.random()*.3+.05});
-  }
-}
-function drawStars(){
-  sctx.clearRect(0,0,sc.width,sc.height);
-  stars.forEach(s=>{
-    s.a+=s.da;
-    if(s.a<=0||s.a>=1)s.da*=-1;
-    s.y+=s.speed;
-    if(s.y>sc.height){s.y=0;s.x=Math.random()*sc.width;}
-    sctx.beginPath();
-    sctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-    sctx.fillStyle=`rgba(255,255,255,${s.a})`;
-    sctx.fill();
-  });
-  requestAnimationFrame(drawStars);
-}
+function initStars(){sc.width=window.innerWidth;sc.height=window.innerHeight;stars=[];for(let i=0;i<200;i++)stars.push({x:Math.random()*sc.width,y:Math.random()*sc.height,r:Math.random()*1.8+.3,a:Math.random(),da:(Math.random()-.5)*.02,speed:Math.random()*.3+.05});}
+function drawStars(){sctx.clearRect(0,0,sc.width,sc.height);stars.forEach(s=>{s.a+=s.da;if(s.a<=0||s.a>=1)s.da*=-1;s.y+=s.speed;if(s.y>sc.height){s.y=0;s.x=Math.random()*sc.width;}sctx.beginPath();sctx.arc(s.x,s.y,s.r,0,Math.PI*2);sctx.fillStyle=`rgba(255,255,255,${s.a})`;sctx.fill();});requestAnimationFrame(drawStars);}
 initStars();drawStars();
 window.addEventListener('resize',initStars);
 
 /* ── FLOATING EMOJIS ── */
 const EMOJIS=['🎈','🎀','⭐','🌸','🦋','✨','🎊','💜','🌟','🍭','🎁','🧁','💫','🌺','🎵'];
-function spawnEmoji(){
-  const el=document.createElement('div');
-  el.className='fe';
-  el.textContent=EMOJIS[Math.floor(Math.random()*EMOJIS.length)];
-  el.style.cssText=`left:${Math.random()*100}vw;font-size:${1+Math.random()*1.5}rem;animation-duration:${7+Math.random()*8}s;animation-delay:0s`;
-  document.body.appendChild(el);
-  setTimeout(()=>el.remove(),(15+Math.random()*8)*1000);
-}
+function spawnEmoji(){const el=document.createElement('div');el.className='fe';el.textContent=EMOJIS[Math.floor(Math.random()*EMOJIS.length)];el.style.cssText=`left:${Math.random()*100}vw;font-size:${1+Math.random()*1.5}rem;animation-duration:${7+Math.random()*8}s;animation-delay:0s`;document.body.appendChild(el);setTimeout(()=>el.remove(),(15+Math.random()*8)*1000);}
 for(let i=0;i<10;i++)setTimeout(spawnEmoji,i*200);
 setInterval(spawnEmoji,800);
 
 /* ── CONFETTI ── */
-const cc=document.getElementById('confetti-canvas');
-const cctx=cc.getContext('2d');
+const cc=document.getElementById('confetti-canvas'),cctx=cc.getContext('2d');
 let pieces=[],running=false;
 function resizeCC(){cc.width=window.innerWidth;cc.height=window.innerHeight;}
 resizeCC();window.addEventListener('resize',resizeCC);
 const COLS=['#FF6EB4','#A855F7','#FFD700','#4ECDC4','#FF6B6B','#74C0FC','#FF9ED4','#C084FC','#ffffff'];
-function launchConfetti(){
-  for(let i=0;i<220;i++){
-    pieces.push({x:Math.random()*cc.width,y:-10,r:4+Math.random()*9,c:COLS[Math.floor(Math.random()*COLS.length)],vy:3+Math.random()*7,vx:(Math.random()-.5)*5,rot:Math.random()*360,rs:(Math.random()-.5)*12,shape:Math.random()>.5?'rect':'circle',op:1});
-  }
-  if(!running)animateConf();
-}
-function animateConf(){
-  running=true;
-  cctx.clearRect(0,0,cc.width,cc.height);
-  pieces=pieces.filter(p=>p.y<cc.height+30&&p.op>0);
-  pieces.forEach(p=>{
-    p.y+=p.vy;p.x+=p.vx;p.rot+=p.rs;p.op-=.005;
-    cctx.save();cctx.translate(p.x,p.y);cctx.rotate(p.rot*Math.PI/180);
-    cctx.globalAlpha=Math.max(0,p.op);cctx.fillStyle=p.c;
-    if(p.shape==='rect'){cctx.fillRect(-p.r,-p.r/2,p.r*2,p.r);}
-    else{cctx.beginPath();cctx.arc(0,0,p.r/2,0,Math.PI*2);cctx.fill();}
-    cctx.restore();
-  });
-  if(pieces.length>0)requestAnimationFrame(animateConf);
-  else running=false;
-}
-function burstBalloon(el){
-  el.style.transition='transform .25s,opacity .25s';
-  el.style.transform='scale(0)';el.style.opacity='0';
-  launchConfetti();
-  setTimeout(()=>{el.style.transform='';el.style.opacity='';},900);
-}
-/* auto confetti */
+function launchConfetti(){for(let i=0;i<220;i++){pieces.push({x:Math.random()*cc.width,y:-10,r:4+Math.random()*9,c:COLS[Math.floor(Math.random()*COLS.length)],vy:3+Math.random()*7,vx:(Math.random()-.5)*5,rot:Math.random()*360,rs:(Math.random()-.5)*12,shape:Math.random()>.5?'rect':'circle',op:1});}if(!running)animateConf();}
+function animateConf(){running=true;cctx.clearRect(0,0,cc.width,cc.height);pieces=pieces.filter(p=>p.y<cc.height+30&&p.op>0);pieces.forEach(p=>{p.y+=p.vy;p.x+=p.vx;p.rot+=p.rs;p.op-=.005;cctx.save();cctx.translate(p.x,p.y);cctx.rotate(p.rot*Math.PI/180);cctx.globalAlpha=Math.max(0,p.op);cctx.fillStyle=p.c;if(p.shape==='rect'){cctx.fillRect(-p.r,-p.r/2,p.r*2,p.r);}else{cctx.beginPath();cctx.arc(0,0,p.r/2,0,Math.PI*2);cctx.fill();}cctx.restore();});if(pieces.length>0)requestAnimationFrame(animateConf);else running=false;}
+function burstBalloon(el){el.style.transition='transform .25s,opacity .25s';el.style.transform='scale(0)';el.style.opacity='0';launchConfetti();setTimeout(()=>{el.style.transform='';el.style.opacity='';},900);}
 setTimeout(launchConfetti,500);
 setTimeout(launchConfetti,2200);
+
+/* ── MUSIC ── */
+const song=document.getElementById('bday-song');
+const btn=document.getElementById('music-btn');
+const lbl=document.querySelector('.music-label');
+let playing=false;
+
+function toggleSong(){
+  if(playing){
+    song.pause();
+    btn.textContent='🎵';
+    lbl.textContent='🎵 Tap to play!';
+  } else {
+    song.play().catch(()=>{});
+    btn.textContent='⏸️';
+    lbl.textContent='🎶 Now playing!';
+  }
+  playing=!playing;
+}
+
+/* Auto-play on first tap anywhere on the page */
+document.addEventListener('click', function startMusic(){
+  if(!playing){
+    song.play().catch(()=>{});
+    playing=true;
+    btn.textContent='⏸️';
+    lbl.textContent='🎶 Now playing!';
+  }
+  document.removeEventListener('click',startMusic);
+},{once:true});
 </script>
-  <source src="song.mp3" type="audio/mpeg">
 </body>
 </html>
